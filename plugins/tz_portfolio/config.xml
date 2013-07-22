@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Can create fieldsets with fields -->
+    <fieldset name="basic" addfieldpath="administrator/components/com_tz_media/models/fields">
+        <!-- Fields in here -->
+        <field type="tzmedia" name="tz_media_file" label="PLG_TZ_PORTFOLIO_TZ_MEDIA_MEDIA_FILE"/>
+        <field type="radio" name="tz_media_type" class="btn-group" default="audio"
+               label="PLG_TZ_PORTFOLIO_TZ_MEDIA_MEDIA_TYPE">
+            <option value="audio">PLG_TZ_PORTFOLIO_TZ_MEDIA_AUDIO</option>
+            <option value="video">PLG_TZ_PORTFOLIO_TZ_MEDIA_VIDEO</option>
+        </field>
+        <field type="text" name="tz_media_artist" label="PLG_TZ_PORTFOLIO_TZ_MEDIA_ARTIST"/>
+    </fieldset>
+
+</config>

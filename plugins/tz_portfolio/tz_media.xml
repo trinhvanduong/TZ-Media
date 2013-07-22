@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tz_portfolio" method="upgrade">
+	<name>plg_tz_portfolio_tz_media</name>
+	<author>DuongTVTemPlaza</author>
+	<creationDate>March 06th 2013</creationDate>
+	<copyright>Copyright (C) 2013 TemPlaza. All rights reserved.</copyright>
+	<license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>support@templaza.com</authorEmail>
+	<authorUrl>www.templaza.com/</authorUrl>
+	<version>3.0.0</version>
+
+	<files>
+        <folder>js</folder>
+        <folder>skin</folder>
+        <filename plugin="tz_media">tz_media.php</filename>
+        <filename>config.xml</filename>
+		<filename>index.html</filename>
+	</files>
+    <languages folder="languages">
+        <language tag="en-GB">en-GB/en-GB.plg_tz_portfolio_tz_media.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_tz_portfolio_tz_media.sys.ini</language>
+    </languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="display_position" type="list"
+                       default="2"
+                       label="PLG_TZ_PORTFOLIO_TZ_MEDIA_DISPLAY_POSITION">
+                    <option value="1">PLG_TZ_PORTFOLIO_TZ_MEDIA_BEFORE_DISPLAY_VIEW</option>
+                    <option value="2">PLG_TZ_PORTFOLIO_TZ_MEDIA_AFTER_DISPLAY_TITLE</option>
+                    <option value="3">PLG_TZ_PORTFOLIO_TZ_MEDIA_BEFORE_DISPLAY_CONTENT</option>
+                    <option value="4">PLG_TZ_PORTFOLIO_TZ_MEDIA_AFTER_DISPLAY_CONTENT</option>
+                </field>
+                <field name="theme" type="list" default="morning.light"
+                       label="PLG_TZ_PORTFOLIO_TZ_MEDIA_THEME">
+                    <option value="blue.monday">PLG_TZ_PORTFOLIO_TZ_MEDIA_BLUE_MONDAY</option>
+                    <option value="pink.flag">PLG_TZ_PORTFOLIO_TZ_MEDIA_PINK_FLAG</option>
+                    <option value="midnight.black">PLG_TZ_PORTFOLIO_TZ_MEDIA_MIDNIGHT_BLACK</option>
+                    <option value="morning.light">PLG_TZ_PORTFOLIO_TZ_MEDIA_MORNING_LIGHT</option>
+                    <option value="none">PLG_TZ_PORTFOLIO_TZ_MEDIA_CUSTOM</option>
+                </field>
+                <field name="tz_media_auto_play" type="radio" class="btn-group"
+                       default="0"
+                        label="PLG_TZ_PORTFOLIO_TZ_MEDIA_AUTO_PLAY">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tz_media_show_volume" type="radio"
+                       default="1" class="btn-group"
+                       label="PLG_TZ_PORTFOLIO_TZ_MEDIA_SHOW_VOLUME">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="tz_media_default_volume" type="text"
+                       default="80%"
+                       label="PLG_TZ_PORTFOLIO_TZ_MEDIA_DEFAULT_VOLUME"
+                        description="PLG_TZ_PORTFOLIO_TZ_MEDIA_DEFAULT_VOLUME_DESC"/>
+                <field name="tz_media_show_fullscreen" type="radio"
+                       default="1" class="btn-group"
+                       label="PLG_TZ_PORTFOLIO_TZ_MEDIA_SHOW_FULLSCREEN"
+                        description="PLG_TZ_PORTFOLIO_TZ_MEDIA_SHOW_FULLSCREEN_DESC">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="tz_media_default_muted" type="radio"
+                       class="btn-group" default="0"
+                       label="PLG_TZ_PORTFOLIO_TZ_MEDIA_DEFAULT_MUTED"
+                        description="PLG_TZ_PORTFOLIO_TZ_MEDIA_DEFAULT_MUTED_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tz_media_loop" type="radio"
+                       class="btn-group" default="0"
+                       label="PLG_TZ_PORTFOLIO_TZ_MEDIA_LOOP"
+                        description="PLG_TZ_PORTFOLIO_TZ_MEDIA_LOOP_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tz_media_wmode" type="list"
+                       label="PLG_TZ_PORTFOLIO_TZ_MEDIA_WMODE"
+                        description="PLG_TZ_PORTFOLIO_TZ_MEDIA_WMODE_DESC">
+                    <option value="opaque">PLG_TZ_PORTFOLIO_TZ_MEDIA_OPAQUE</option>
+                    <option value="transparent">PLG_TZ_PORTFOLIO_TZ_MEDIA_TRANSPARENT</option>
+                    <option value="direct">PLG_TZ_PORTFOLIO_TZ_MEDIA_DIRECT</option>
+                    <option value="gpu">PLG_TZ_PORTFOLIO_TZ_MEDIA_GPU</option>
+                    <option value="window">PLG_TZ_PORTFOLIO_TZ_MEDIA_WINDOW</option>
+               </field>
+            </fieldset>
+        </fields>
+	</config>
+</extension>

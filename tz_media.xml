@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_tz_media</name>
+	<author>DuongTVTemplaza</author>
+	<creationDate>March 01st 2013</creationDate>
+	<copyright>Copyright (C) 2012 TemPlaza. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>support@templaza.com</authorEmail>
+	<authorUrl>www.templaza.com/</authorUrl>
+	<version>3.0.0</version>
+	<description>COM_TZ_MEDIA_XML_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+    <files folder="site">
+        <filename>index.html</filename>
+    </files>
+	<administration>
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>tz_media.php</filename>
+			<folder>controllers</folder>
+			<folder>css</folder>
+			<folder>helpers</folder>
+			<folder>js</folder>
+			<folder>libraries</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin/languages">
+			<language tag="en-GB">en-GB/en-GB.com_tz_media.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tz_media.sys.ini</language>
+		</languages>
+	</administration>
+    <config>
+        <fields>
+            <field name="upload_extensions" default="mp3,mp4,ogg,webm,wav,flv"/>
+            <field name="upload_maxsize" default="100"/>
+        </fields>
+    </config>
+    <plugins>
+        <plugin plugin="tz_media" group="tz_portfolio" enabled="true"/>
+    </plugins>
+</extension>
+
