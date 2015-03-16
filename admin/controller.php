@@ -28,6 +28,33 @@ defined('_JEXEC') or die;
  */
 class TZ_MediaController extends JControllerLegacy
 {
+    public function __construct($config=array()){
+        $this -> input  = JFactory::getApplication() -> input;
+        parent::__construct($config);
+
+        // If the joomla's version is more than or equal to 3.0
+        if(!COM_TZ_MEDIA_JVERSION_COMPARE){
+            JHtml::addIncludePath(JPATH_ADMINISTRATOR.'/components/com_tz_media/libraries/cms/html');
+            tzmediaimport('cms/html/sidebar');
+
+            $doc    = JFactory::getDocument();
+            //Add Script to the header
+            $doc -> addScript(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/js/jquery.min.js');
+            $doc -> addScript(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/js/jquery-noconflict.js');
+            $doc -> addScript(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/js/bootstrap.min.js');
+            $doc -> addScript(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/js/chosen.jquery.min.js');
+            $doc -> addScript(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/js/jquery.ui.core.min.js');
+            $doc -> addScript(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/js/jquery.ui.sortable.min.js');
+            $doc -> addScript(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/js/sortablelist.js');
+            $doc -> addScript(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/js/template.js');
+
+            $doc -> addStyleSheet(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/css/chosen.css');
+//                    $doc -> addStyleSheet(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/jui/css/bootstrap.min.css');
+            //        $doc -> addStyleSheet(COM_TZ_MEDIA_ADMIN_HOST_PATH.'/css/template.css');
+            $doc -> addCustomTag('<link href="'.COM_TZ_MEDIA_ADMIN_HOST_PATH.'/css/template.css'.
+                '" rel="stylesheet" type="text/css"/>');
+        }
+    }
 	/**
 	 * Method to display a view.
 	 *

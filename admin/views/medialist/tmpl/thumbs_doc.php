@@ -21,7 +21,7 @@ defined('_JEXEC') or die;
 
 $user = JFactory::getUser();
 $params = new JRegistry;
-$dispatcher	= JEventDispatcher::getInstance();
+$dispatcher	= JDispatcher::getInstance();
 $dispatcher->trigger('onContentBeforeDisplay', array('com_tz_media.file', &$this->_tmp_doc, &$params));
 ?>
 		<li class="imgOutline thumbnail height-80 width-80 center">

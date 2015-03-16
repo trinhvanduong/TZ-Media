@@ -42,7 +42,7 @@ class plgTZ_PortfolioTZ_Media extends JPlugin
 	{
         if($context == 'com_tz_portfolio.p_article'){
             if($this -> params -> get('display_position',2) == 1){
-                echo $this -> createHtml(&$article, &$params,&$pluginParams);
+                echo $this -> createHtml($article, $params,$pluginParams);
             }
         }
 	}
@@ -52,7 +52,7 @@ class plgTZ_PortfolioTZ_Media extends JPlugin
         //Do something
         if($context == 'com_tz_portfolio.p_article'){
             if($this -> params -> get('display_position',2) == 2){
-                echo $this -> createHtml(&$article, &$params,&$pluginParams);
+                echo $this -> createHtml($article, $params,$pluginParams);
             }
         }
     }
@@ -61,7 +61,7 @@ class plgTZ_PortfolioTZ_Media extends JPlugin
         //Do something
         if($context == 'com_tz_portfolio.p_article'){
             if($this -> params -> get('display_position',2) == 3){
-                echo $this -> createHtml(&$article, &$params,&$pluginParams);
+                echo $this -> createHtml($article, $params,$pluginParams);
             }
         }
     }
@@ -70,7 +70,7 @@ class plgTZ_PortfolioTZ_Media extends JPlugin
         //Do something
         if($context == 'com_tz_portfolio.p_article'){
             if($this -> params -> get('display_position',2) == 4){
-                echo $this -> createHtml(&$article, &$params,&$pluginParams);
+                echo $this -> createHtml($article, $params,$pluginParams);
             }
         }
     }

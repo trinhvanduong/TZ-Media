@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
 	<authorEmail>support@templaza.com</authorEmail>
 	<authorUrl>www.templaza.com/</authorUrl>
-	<version>3.0.0</version>
+	<version>3.1.1</version>
 	<description>COM_TZ_MEDIA_XML_DESCRIPTION</description>
     <scriptfile>script.php</scriptfile>
     <files folder="site">
@@ -23,6 +23,7 @@
 			<folder>css</folder>
 			<folder>helpers</folder>
 			<folder>js</folder>
+			<folder>jui</folder>
 			<folder>libraries</folder>
 			<folder>models</folder>
 			<folder>views</folder>
@@ -31,6 +32,7 @@
 			<language tag="en-GB">en-GB/en-GB.com_tz_media.ini</language>
 			<language tag="en-GB">en-GB/en-GB.com_tz_media.sys.ini</language>
 		</languages>
+        <menu>com_tz_media</menu>
 	</administration>
     <config>
         <fields>

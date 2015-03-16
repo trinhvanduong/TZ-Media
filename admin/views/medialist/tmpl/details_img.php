@@ -23,7 +23,7 @@ JHtml::_('bootstrap.tooltip');
 
 $user = JFactory::getUser();
 $params = new JRegistry;
-$dispatcher	= JEventDispatcher::getInstance();
+$dispatcher	= JDispatcher::getInstance();
 $dispatcher->trigger('onContentBeforeDisplay', array('com_tz_media.file', &$this->_tmp_img, &$params));
 ?>
 		<tr>

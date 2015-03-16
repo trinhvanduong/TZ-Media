@@ -37,6 +37,9 @@ if (!$user->authorise('core.manage', 'com_tz_media')
 
 $params = JComponentHelper::getParams('com_tz_media');
 
+include_once dirname(__FILE__) . '/libraries/core/defines.php';
+include_once dirname(__FILE__) . '/libraries/core/tzmedia.php';
+
 // Load the helper class
 require_once JPATH_COMPONENT_ADMINISTRATOR . '/helpers/tz_media.php';
 

@@ -25,6 +25,11 @@ jimport('joomla.filesystem.folder');
 class TZ_MediaControllerFolder extends JControllerLegacy
 {
 
+    public function __construct($config=array()){
+        $this -> input  = JFactory::getApplication() -> input;
+        parent::__construct($config);
+    }
+
 	/**
 	 * Deletes paths from the current path
 	 */
@@ -65,7 +70,7 @@ class TZ_MediaControllerFolder extends JControllerLegacy
 		$ret = true;
 
 		JPluginHelper::importPlugin('content');
-		$dispatcher	= JEventDispatcher::getInstance();
+		$dispatcher	= JDispatcher::getInstance();
 		if (count($paths))
 		{
 			foreach ($paths as $path)
@@ -169,7 +174,7 @@ class TZ_MediaControllerFolder extends JControllerLegacy
 				// Trigger the onContentBeforeSave event.
 				$object_file = new JObject(array('filepath' => $path));
 				JPluginHelper::importPlugin('content');
-				$dispatcher	= JEventDispatcher::getInstance();
+				$dispatcher	= JDispatcher::getInstance();
 				$result = $dispatcher->trigger('onContentBeforeSave', array('com_tz_media.folder', &$object_file));
 				if (in_array(false, $result, true))
 				{

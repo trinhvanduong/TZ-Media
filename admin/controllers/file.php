@@ -29,6 +29,11 @@ class TZ_MediaControllerFile extends JControllerLegacy
 	 */
 	protected $folder = '';
 
+    public function __construct($config=array()){
+        $this -> input  = JFactory::getApplication() -> input;
+        parent::__construct($config);
+    }
+
 	/**
 	 * Used as a callback for array_map, turns the multi-file input array into a sensible array of files
 	 * Also, removes illegal characters from the 'name' and sets a 'filepath' as the final destination of the file
@@ -112,7 +117,7 @@ class TZ_MediaControllerFile extends JControllerLegacy
 		JClientHelper::setCredentialsFromRequest('ftp');
 
 		JPluginHelper::importPlugin('content');
-		$dispatcher	= JEventDispatcher::getInstance();
+		$dispatcher	= JDispatcher::getInstance();
 
 		$ret = true;
 		foreach ($paths as $path)
